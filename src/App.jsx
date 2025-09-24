@@ -5,33 +5,32 @@ import { Footer } from "./components/Footer";
 import { GalleryPage } from "./pages/GallaryPage";
 import { ContactUsPage } from "./pages/ContactUsPage";
 import { ServicesPage } from "./pages/ServicesPage";
-import { Routes, Route, Link, RouterProvider, createBrowserRouter } from "react-router-dom"; 
+import { Routes, Route, BrowserRouter, Outlet } from "react-router-dom"; 
 
 function Layout() {
   return (
     <div>
       <Header />
-      <HomePage />
+      <Outlet/>
       <Footer />
     </div>
   );
 }
 
-const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/gallery", element: <GalleryPage /> },
-  { path: "/services", element: <ServicesPage /> },
-  { path: "/contact", element: <ContactUsPage /> },
-]);
-
 function App() {
-  return <RouterProvider router={router} />;
-    // <div>
-    //   {/* <Header />
-    //   <HomePage />
-    //   <Footer /> */}
-    // </div>
+  return (
+    <BrowserRouter>
+      <Routes> 
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="gallery" element={<GalleryPage />} />
+          <Route path="contact" element={<ContactUsPage />} />
+        </Route>
+      </Routes></BrowserRouter>
+  )
 }
+
 
 
 export default App;
