@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
+import { useState } from "react";
 
 export function ContactUsPage() {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,66 +23,103 @@ export function ContactUsPage() {
   };
 
   return (
-    <div>
-      <div>
-        <h2>Contact Us</h2>
-        <p><strong>Call</strong> (385) 450-8775 <strong>or text</strong> (801) 361-3315</p>
-        <p><strong>Email</strong> Marroquinconcrete@gmail.com</p>
-      </div>
+    <div className="container my-5 d-flex justify-content-center">
+      <div className="row w-100 col-lg-10 col-xl-8">
+        {/* Left Side: Contact Info + Map */}
+        <div className="col-md-5 mb-4">
+          <h2 className="text-center text-md-start">Contact Us</h2>
+          <p className="text-center text-md-start">
+            <strong>Call:</strong> (385) 450-8775 <br />
+            <strong>Text:</strong> (801) 361-3315 <br />
+            <strong>Email:</strong> Marroquinconcrete@gmail.com
+          </p>
 
-      <div>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Full Name:
-            <input 
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required />
-          </label>
+          {/* Google Maps Embed */}
+          <div className="mt-4">
+            <iframe
+              title="Utah County Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48221.056152056166!2d-111.7613939!3d40.2989478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d83b9f3c51b07%3A0xe0d9a0545cf70d4d!2sUtah%20County%2C%20UT!5e0!3m2!1sen!2sus!4v1695518352785!5m2!1sen!2sus"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
-          <label>
-            Email Address:
-            <input 
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required />
-          </label>
+        {/* Right Side: Form */}
+        <div className="col-md-7">
+          <h3 className="text-center text-md-start">Send Us a Message</h3>
+          <form onSubmit={handleSubmit} className="row g-3">
+            <div className="col-md-6">
+              <label className="form-label">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                className="form-control"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          <label>
-            Phone / Mobile Number:
-            <input 
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required />
-          </label>
+            <div className="col-md-6">
+              <label className="form-label">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          <label>
-            What service do you need?
-            <input
-            type="text"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            />
-          </label>
+            <div className="col-md-6">
+              <label className="form-label">Phone / Mobile Number</label>
+              <input
+                type="tel"
+                name="phone"
+                className="form-control"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          <label>
-            Message: 
-            <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
+            <div className="col-md-6">
+              <label className="form-label">What service do you need?</label>
+              <input
+                type="text"
+                name="service"
+                className="form-control"
+                value={formData.service}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="col-12">
+              <label className="form-label">Message</label>
+              <textarea
+                name="message"
+                className="form-control"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="col-12 text-center text-md-start">
+              <button type="submit" className="btn btn-primary px-4">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  )
+  );
 }
