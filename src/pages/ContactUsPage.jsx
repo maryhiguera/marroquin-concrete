@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export function ContactUsPage() {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -8,6 +10,26 @@ export function ContactUsPage() {
     service: "",
     message: "",
   });
+
+  const SERVICE_ID = "service_ql4glo9"
+  const TEMPLATE_ID = "template_ya3gwrv"
+  const PUBLIC_KEY = "Sq7MTirsQd3zhzX3N"
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -17,10 +39,11 @@ export function ContactUsPage() {
     }));
   };
 
+  /* Use handleSubmit instead of onSubmit in the future
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Submitted form data:", formData);
-  };
+  }; */
 
   return (
     <div className="container my-5 d-flex justify-content-center">
@@ -52,7 +75,7 @@ export function ContactUsPage() {
         {/* Right Side: Form */}
         <div className="col-md-7">
           <h3 className="text-center text-md-start">Send Us a Message</h3>
-          <form onSubmit={handleSubmit} className="row g-3">
+          <form ref={form} onSubmit={sendEmail} className="row g-3">
             <div className="col-md-6">
               <label className="form-label">Full Name</label>
               <input
