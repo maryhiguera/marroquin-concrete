@@ -1,12 +1,28 @@
 import Stairs1 from '../assets/Stairs1.jpg';
 import Stairs2 from '../assets/Stairs2.jpg';
+import Backyard from '../assets/backyard.png';
 
 export function ServicesPage() {
+  const headerStyle = {
+      backgroundImage: `url(${Backyard})`, 
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      color: 'white',
+      padding: '120px 20px', 
+      textAlign: 'center',
+      fontSize: '4rem', 
+      fontWeight: 'bold',
+      textShadow: '2px 2px 6px rgba(0,0,0,0.6)', 
+      marginBottom: '40px',
+      borderRadius: '12px'
+    };
+
   return (
     <div className="container my-5">
       {/* Page Title */}
-      <div className="text-center mb-5">
-        <h1>Our Services</h1>
+      <div style={headerStyle}>
+        Our Services
+        <p style={{ fontSize: '1.25rem', fontWeight: 'normal' }}>Home → Services</p>
       </div>
 
       {/* Service Description */}

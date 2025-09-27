@@ -1,7 +1,14 @@
-.navbar-nav .nav-link.active {
-  color: red !important;
+.custom-navbar {
+  padding-top: 0.25rem;
+  /* smaller padding */
+  padding-bottom: 0.25rem;
 }
 
-.navbar-nav .nav-link:hover {
-  color: darkred;
+.navbar .nav-link {
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ff4d4d;
+  /* red hover */
 }

@@ -4,7 +4,7 @@ import './Header.css';
 export function Header() {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <nav className="navbar navbar-expand-lg bg-dark shadow-sm custom-navbar">
         <div className="container d-flex flex-column flex-lg-row align-items-center">
           {/* Logo */}
           <a className="navbar-brand mb-2 mb-lg-0" href="/">
@@ -12,13 +12,13 @@ export function Header() {
               src={MarroquinLogo} 
               alt="Marroquin Logo" 
               className="img-fluid" 
-              style={{ maxHeight: "120px" }} 
+              style={{ maxHeight: "90px" }}  // bigger logo
             />
           </a>
 
           {/* Hamburger (for mobile) */}
           <button 
-            className="navbar-toggler" 
+            className="navbar-toggler navbar-dark" 
             type="button" 
             data-bs-toggle="collapse" 
             data-bs-target="#navbarNav" 
@@ -33,19 +33,19 @@ export function Header() {
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav text-uppercase fw-bold d-flex gap-3">
               <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <a className="nav-link text-light" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">About Us</a>
+                <a className="nav-link text-light" href="/about">About Us</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/services">Services</a>
+                <a className="nav-link text-light" href="/services">Services</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/gallery">Gallery</a>
+                <a className="nav-link text-light" href="/gallery">Gallery</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">Contact Us</a>
+                <a className="nav-link text-light" href="/contact">Contact Us</a>
               </li>
             </ul>
           </div>
