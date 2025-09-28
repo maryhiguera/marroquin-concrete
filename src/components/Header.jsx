@@ -4,7 +4,7 @@ import './Header.css';
 export function Header() {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-dark shadow-sm custom-navbar">
+      <nav className="navbar navbar-expand-lg shadow-sm custom-navbar" style={{ backgroundColor: "#030303ff" }}>
         <div className="container d-flex flex-column flex-lg-row align-items-center">
           {/* Logo */}
           <a className="navbar-brand mb-2 mb-lg-0" href="/">
@@ -12,7 +12,7 @@ export function Header() {
               src={MarroquinLogo} 
               alt="Marroquin Logo" 
               className="img-fluid" 
-              style={{ maxHeight: "90px" }}  // bigger logo
+              style={{ maxHeight: "90px" }}  // bigger logo   
             />
           </a>
 
@@ -48,6 +48,9 @@ export function Header() {
                 <a className="nav-link text-light" href="/contact">Contact Us</a>
               </li>
             </ul>
+          </div>
+          <div style={{ marginLeft: "auto", borderRadius: "20px", backgroundColor: "#ea1313ff", padding: "5px 10px" }}>
+            <a href="tel:+13854500775" style={{ color: "white", textDecoration: "none" }}>Call Us Now</a>
           </div>
         </div>
       </nav>

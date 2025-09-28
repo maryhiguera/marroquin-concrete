@@ -13,8 +13,8 @@ export function ContactUsPage() {
   });
 
   const SERVICE_ID = "service_ql4glo9";
-  const TEMPLATE_ID = "template_ya3gwrv";
-  const PUBLIC_KEY = "Sq7MTirsQd3zhzX3N";
+  const TEMPLATE_ID = "template_5se6fum";
+  const PUBLIC_KEY = "iEd3bLGVR6ubY4vkE";
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -43,40 +43,41 @@ export function ContactUsPage() {
   return (
     <main>
       {/* Hero Section */}
-      <div 
-        className="position-relative d-flex justify-content-center align-items-center text-center"
-        style={{
-          backgroundImage: `url(${Backyard})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "40vh",
-          width: "100%",
-        }}
-      >
-        {/* Overlay */}
+      <div style={{ marginTop: 0 }}>
+        {/* Hero Section */}
         <div 
-          className="position-absolute top-0 start-0 w-100 h-100"
-          style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1 }}
-        />
-        {/* Hero Text */}
-        <div className="position-relative text-white" style={{ zIndex: 2 }}>
-          <h1 className="display-4 fw-bold">Contact Us</h1>
-          <p>Home → Contact Us</p>
+          className="position-relative d-flex justify-content-center align-items-center text-center"
+          style={{
+            backgroundImage: `url(${Backyard})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "30vh",
+            width: "100%",
+            marginTop: 0,
+          }}
+        >
+          {/* Overlay */}
+          <div 
+            className="position-absolute top-0 start-0 w-100 h-100"
+            style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1 }}
+          />
+          {/* Hero Text */}
+          <div className="position-relative text-white" style={{ zIndex: 2 }}>
+            <h1 className="display-4 fw-bold">Contact Us</h1>
+            <p>Home → Contact Us</p>
+          </div>
         </div>
-      </div>
 
       {/* Contact Section */}
-      <div className="container my-5">
-        <div className="row justify-content-center g-4">
-          {/* Left Column: Info + Map */}
-          <div className="col-lg-5">
-            <h2 className="mb-3 text-center text-lg-start">Contact Us</h2>
-            <p className="text-center text-lg-start">
+      <div className="container my-5 d-flex justify-content-center">
+        <div className="row w-100 justify-content-center g-4">
+          <div className="col-12 col-lg-5">
+            <h2 className="mb-3 text-center text-lg-start" style={{ fontSize: "2rem", fontWeight: "bold" }}>Contact Us</h2>
+            <p className="text-center text-lg-start" style={{ fontSize: "1.15rem" }}>
               <strong>Call:</strong> (385) 450-8775 <br />
               <strong>Text:</strong> (801) 361-3315 <br />
               <strong>Email:</strong> Marroquinconcrete@gmail.com
             </p>
-
             <div className="mt-4">
               <iframe
                 title="Utah County Map"
@@ -91,77 +92,39 @@ export function ContactUsPage() {
             </div>
           </div>
 
-          {/* Right Column: Form */}
-          <div className="col-lg-7">
-            <h3 className="mb-3 text-center text-lg-start">Send Us a Message</h3>
-            <form ref={form} onSubmit={sendEmail} className="row g-3">
-              <div className="col-md-6">
-                <label className="form-label">Full Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  className="form-control"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="col-md-6">
-                <label className="form-label">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="col-md-6">
-                <label className="form-label">Phone / Mobile Number</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  className="form-control"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="col-md-6">
-                <label className="form-label">Service Needed</label>
-                <input
-                  type="text"
-                  name="service"
-                  className="form-control"
-                  value={formData.service}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="col-12">
-                <label className="form-label">Message</label>
-                <textarea
-                  name="message"
-                  className="form-control"
-                  rows="4"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="col-12 text-center text-lg-start">
-                <button type="submit" className="btn btn-primary px-4">
-                  Submit
-                </button>
-              </div>
-            </form>
+          <div className="col-12 col-lg-7 d-flex justify-content-center">
+            <div className="p-4 border rounded shadow bg-light w-100">
+              <h3 className="mb-3 text-center" style={{ fontSize: "1.75rem", fontWeight: "bold" }}>Send Us a Message</h3>
+              <form ref={form} onSubmit={sendEmail} className="row g-3">
+                <div className="col-md-6">
+                  <label className="form-label" style={{ fontSize: "1.1rem" }}>Full Name</label>
+                  <input type="text" name="name" className="form-control" value={formData.name} onChange={handleChange} required />
+                </div>
+                <div className="col-md-6">
+                  <label className="form-label" style={{ fontSize: "1.1rem" }}>Email Address</label>
+                  <input type="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
+                </div>
+                <div className="col-md-6">
+                  <label className="form-label" style={{ fontSize: "1.1rem" }}>Phone / Mobile Number</label>
+                  <input type="tel" name="phone" className="form-control" value={formData.phone} onChange={handleChange} required />
+                </div>
+                <div className="col-md-6">
+                  <label className="form-label" style={{ fontSize: "1.1rem" }}>Service Needed</label>
+                  <input type="text" name="service" className="form-control" value={formData.service} onChange={handleChange} />
+                </div>
+                <div className="col-12">
+                  <label className="form-label" style={{ fontSize: "1.1rem" }}>Message</label>
+                  <textarea name="message" className="form-control" rows="5" value={formData.message} onChange={handleChange} required />
+                </div>
+                <div className="col-12 text-center">
+                  <button type="submit" className="btn btn-danger px-5 fw-bold" style={{ fontSize: "1.15rem" }}>Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
+
         </div>
+      </div>
       </div>
     </main>
   );
