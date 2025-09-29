@@ -6,6 +6,8 @@ export function Header() {
     <header>
       <nav className="navbar navbar-expand-lg shadow-sm custom-navbar" style={{ backgroundColor: "#030303ff" }}>
         <div className="container d-flex flex-column flex-lg-row align-items-center">
+
+          {/* Logo */}
           <a className="navbar-brand mb-2 mb-lg-0" href="/">
             <img 
               src={MarroquinLogo} 
@@ -14,6 +16,25 @@ export function Header() {
               style={{ maxHeight: "90px" }}   
             />
           </a>
+
+          {/* Call Us Button (mobile only, centered under logo) */}
+          <div className="d-lg-none mb-2 text-center">
+            <a 
+              href="tel:+13854500775" 
+              style={{ 
+                display: "inline-block",
+                borderRadius: "20px",
+                backgroundColor: "#ea1313ff",
+                padding: "6px 14px",
+                color: "white",
+                textDecoration: "none",
+                fontWeight: "bold",
+                fontSize: "14px"
+              }}
+            >
+              Call Us Now
+            </a>
+          </div>
 
           {/* Hamburger (for mobile) */}
           <button 
@@ -48,9 +69,12 @@ export function Header() {
               </li>
             </ul>
           </div>
-          <div style={{ marginLeft: "auto", borderRadius: "20px", backgroundColor: "#ea1313ff", padding: "5px 10px" }}>
+
+          {/* Call Us Button (desktop only, stays right) */}
+          <div className="d-none d-lg-block ms-auto" style={{ borderRadius: "20px", backgroundColor: "#ea1313ff", padding: "5px 10px" }}>
             <a href="tel:+13854500775" style={{ color: "white", textDecoration: "none" }}>Call Us Now</a>
           </div>
+
         </div>
       </nav>
     </header>
