@@ -7,13 +7,12 @@ export function Footer() {
 
         {/* Top Section */}
         <div className="row justify-content-center g-4">
-          {/* Logo / Info */}
           <div className="col-md-3">
             <img 
               src={MarroquinLogo} 
               alt="Marroquin Logo" 
               className="img-fluid mb-3"
-              style={{ maxWidth: "180px" }} // slightly smaller for consistency
+              style={{ maxWidth: "180px" }}
             />
             <p className="mb-0 fs-6">
               Look no further, our team is here to help.
@@ -50,7 +49,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="d-flex flex-column align-items-center justify-content-center pt-4 border-top border-secondary mt-4">
           <p className="mb-0 fs-7 text-center">
             © 2025 Marroquin Concrete LLC. All Rights Reserved.

@@ -7,13 +7,10 @@ import { ContactUsPage } from "./pages/ContactUsPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { Routes, Route, BrowserRouter, Outlet } from "react-router-dom"; 
-// import { TopBar } from "./components/TopBar.jsx";
-
 
 function Layout() {
   return (
     <div>
-      {/* <TopBar /> */}
       <Header />
       <Outlet/>
       <Footer />

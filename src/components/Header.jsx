@@ -6,13 +6,12 @@ export function Header() {
     <header>
       <nav className="navbar navbar-expand-lg shadow-sm custom-navbar" style={{ backgroundColor: "#030303ff" }}>
         <div className="container d-flex flex-column flex-lg-row align-items-center">
-          {/* Logo */}
           <a className="navbar-brand mb-2 mb-lg-0" href="/">
             <img 
               src={MarroquinLogo} 
               alt="Marroquin Logo" 
               className="img-fluid" 
-              style={{ maxHeight: "90px" }}  // bigger logo   
+              style={{ maxHeight: "90px" }}   
             />
           </a>
 

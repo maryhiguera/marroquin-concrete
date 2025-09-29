@@ -26,8 +26,8 @@ export function ContactUsPage() {
       .then(
         () => {
           setStatusMessage("✅ Message sent successfully!");
-          setFormData({ name: "", email: "", phone: "", service: "", message: "" }); // clear form
-          setTimeout(() => setStatusMessage(""), 4000); // hide message after 4s
+          setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+          setTimeout(() => setStatusMessage(""), 4000);
         },
         (error) => {
           setStatusMessage("❌ Failed to send message. Please try again.");

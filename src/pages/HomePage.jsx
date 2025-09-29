@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Backyard from '../assets/Backyard.png';
+import Backyard from '../assets/backyard.png';
 import Sidehouse from '../assets/sidehouse.png';
 import Stairs1 from '../assets/Stairs1.jpg';
 import Stairs2 from '../assets/Stairs2.jpg';
