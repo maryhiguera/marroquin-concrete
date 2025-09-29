@@ -16,9 +16,9 @@ export function HomePage() {
     message: "",
   });
 
-  const SERVICE_ID = "service_ql4glo9";
-  const TEMPLATE_ID = "template_ya3gwrv";
-  const PUBLIC_KEY = "Sq7MTirsQd3zhzX3N";
+  const SERVICE_ID = "service_cedaenp";
+  const TEMPLATE_ID = "template_5se6fum";
+  const PUBLIC_KEY = "iEd3bLGVR6ubY4vkE";
 
   const sendEmail = (e) => {
     e.preventDefault();
